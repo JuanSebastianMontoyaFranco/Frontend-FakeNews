@@ -13,7 +13,7 @@ export default function App() {
     setError(null)
     setResults(null)
     try {
-      const res = await axios.post('http://127.0.0.1:8000/api/predict/', { text })
+      const res = await axios.post('https://backend-fakenews.onrender.com/api/predict/api/predict/', { text })
       setResults(res.data.results)
     } catch (err) {
       setError('Error al conectar con el servidor')
